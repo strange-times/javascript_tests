@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+   main.html
+   
+   Copyright 2022 david <strange-times@DESKTOP-MBB1F38>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<head>
+<meta charset="utf-8" />
+<title>toyproject</title>
+<meta name="generator" content="Geany 1.35" />
+</head>
+
+<body>
+	<img src = "https://www.publicdomainpictures.net/pictures/310000/velka/orange-circle.png" id = "cirkel" style = "margin:0px 0px 0px 0px; width:100px; height:100px">
+<script src="bar.js"></script>
+<script>
+	var height = 0;
+	var moveDown = true;
+	interval = setInterval(foo, 10);
+	
+	
+	function foo(){
+
+		if(height>400){
+			moveDown = false;
+		}
+		if(height<5){
+			moveDown=true;
+		}
+		if(moveDown){
+			height += 10;
+		}
+		else{
+			height -= 10
+		}
+		document.getElementById("cirkel").style.margin = height+"px 0px 0px 0px";
+	}
+</script>
+</body>
+
+</html>
